@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>属性选择器</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<style>
+			div{
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+			}
+			div:not([data-type]) {
+				background-color: #e3e3e3;
+			}
+			div[data-type][data-id] {
+				background: orange;
+			}
+			div[data-type*="demo"] {
+				background-color: yellow;
+			}
+			div[data-type~="demo-second"] {
+				background-color: blue;
+			}
+			div[data-type|="third"] {
+				background-color: brown;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div>测试</div>
+		<div data-type="demo">测试</div>
+		<div data-type="demo demo-first" data-id="first">测试</div>
+		<div data-type="demo demo-second">测试</div>
+		<div data-type="third-demo">测试</div>
+	</body>
+</html>
