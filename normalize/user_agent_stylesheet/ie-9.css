@@ -1,0 +1,569 @@
+[dir=rtl] dd
+{
+    margin: 0 40px 0 0;
+}
+
+[dir=rtl] menu
+{
+    padding: 0 30pt 0 0;
+}
+
+[dir=rtl] ol
+{
+    padding: 0 30pt 0 0;
+}
+
+[dir=rtl] ul
+{
+    padding: 0 30pt 0 0;
+}
+
+a
+{
+    text-decoration: underline;
+
+    color: #06c;
+}
+
+a:visited
+{
+    color: #80080;
+}
+
+address
+{
+    font-style: italic;
+
+    display: block;
+}
+
+b
+{
+    font-weight: bold;
+}
+
+bdo
+{
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+blockquote
+{
+    display: block;
+
+    margin: 1em 40px;
+}
+
+body
+{
+    display: block;
+    zoom: 1;
+
+    margin: 8px;
+}
+
+button
+{
+    font-family: sans-serif;
+    font-size: 10pt;
+
+    overflow: hidden;
+    zoom: 1;
+
+    box-sizing: border-box;
+    padding: 1px 8px;
+
+    text-align: center;
+
+    border-width: 3px;
+    background-color: #f0f0f0;
+}
+
+caption
+{
+    display: table-caption;
+    zoom: 1;
+
+    text-align: center;
+}
+
+cite
+{
+    font-style: italic;
+}
+
+code
+{
+    font-family: monospace;
+    font-size: 10pt;
+}
+
+col
+{
+    display: table-column;
+
+    box-sizing: border-box;
+}
+
+colgroup
+{
+    display: table-column-group;
+
+    box-sizing: border-box;
+}
+
+dd
+{
+    display: block;
+
+    margin: 0 0 0 40px;
+}
+
+del
+{
+    text-decoration: line-through;
+}
+
+dfn
+{
+    font-style: italic;
+}
+
+div
+{
+    display: block;
+}
+
+dl
+{
+    display: block;
+
+    margin: 1em 0;
+}
+
+dt
+{
+    display: block;
+}
+
+em
+{
+    font-style: italic;
+}
+
+embed
+{
+    zoom: 1;
+}
+
+fieldset
+{
+    display: block;
+    zoom: 1;
+
+    margin: 0 2px;
+    padding: 0 2px 3px;
+
+    border-width: 2px;
+    border-style: groove;
+}
+
+form
+{
+    display: block;
+}
+
+h1
+{
+    font-size: 2em;
+    font-weight: bold;
+
+    display: block;
+
+    margin: .67em 0;
+
+    page-break-after: avoid;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: bold;
+
+    display: block;
+
+    margin: .83em 0;
+
+    page-break-after: avoid;
+}
+
+h3
+{
+    font-size: 1.17em;
+    font-weight: bold;
+
+    display: block;
+
+    margin: 1em 0;
+
+    page-break-after: avoid;
+}
+
+h4
+{
+    font-size: 1em;
+    font-weight: bold;
+
+    display: block;
+
+    margin: 1.33em 0;
+
+    page-break-after: avoid;
+}
+
+h5
+{
+    font-size: .83em;
+    font-weight: bold;
+
+    display: block;
+
+    margin: 1.67em 0;
+
+    page-break-after: avoid;
+}
+
+h6
+{
+    font-size: .67em;
+    font-weight: bold;
+
+    display: block;
+
+    margin: 2.33em 0;
+
+    page-break-after: avoid;
+}
+
+head
+{
+    display: none;
+}
+
+hr
+{
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    text-align: center;
+
+    border-width: 1px;
+    border-style: inset;
+}
+
+html
+{
+    display: block;
+    zoom: 1;
+}
+
+i
+{
+    font-style: italic;
+}
+
+iframe
+{
+    zoom: 1;
+
+    width: 300px;
+    height: 150px;
+
+    background-color: #fff;
+}
+
+img
+{
+    zoom: 1;
+}
+
+input
+{
+    font-family: sans-serif;
+    font-size: 10pt;
+
+    overflow: hidden;
+    zoom: 1;
+
+    padding: 1px;
+
+    border-width: 2px;
+    background-color: #fff;
+}
+
+ins
+{
+    text-decoration: underline;
+}
+
+kbd
+{
+    font-family: monospace;
+    font-size: 10pt;
+}
+
+legend
+{
+    zoom: 1;
+
+    padding: 0 2px;
+}
+
+li
+{
+    display: list-item;
+}
+
+menu
+{
+    display: block;
+
+    margin: 1em 0;
+    padding: 0 0 0 30pt;
+
+    list-style-position: outside;
+    list-style-type: disc;
+    list-style-image: none;
+}
+
+object
+{
+    zoom: 1;
+}
+
+ol
+{
+    display: block;
+
+    margin: 1em 0;
+    padding: 0 0 0 30pt;
+
+    list-style-position: outside;
+    list-style-type: decimal;
+    list-style-image: none;
+}
+
+optgroup
+{
+    font-family: sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    font-style: italic;
+}
+
+option
+{
+    font-family: sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    font-style: italic;
+}
+
+p
+{
+    display: block;
+
+    margin: 1em 0;
+}
+
+pre
+{
+    font-family: monospace;
+    font-size: 10pt;
+
+    display: block;
+
+    margin: 1em 0;
+
+    white-space: pre;
+}
+
+rp
+{
+    font-size: 6pt;
+}
+
+rt
+{
+    font-size: 6pt;
+
+    display: ruby-text;
+}
+
+ruby
+{
+    display: ruby;
+}
+
+samp
+{
+    font-family: monospace;
+    font-size: 10pt;
+}
+
+script
+{
+    display: none;
+    zoom: 1;
+}
+
+select
+{
+    font-family: sans-serif;
+    font-size: 10pt;
+
+    overflow: hidden;
+    zoom: 1;
+
+    box-sizing: border-box;
+
+    border-width: 1px;
+    background-color: #fff;
+}
+
+small
+{
+    font-size: .83em;
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+style
+{
+    display: none;
+    zoom: 1;
+}
+
+sub
+{
+    font-size: .83em;
+}
+
+sup
+{
+    font-size: .83em;
+}
+
+table
+{
+    display: table;
+    zoom: 1;
+
+    box-sizing: border-box;
+
+    border-spacing: 2px 2px;
+
+    border-color: #f0f0f0;
+}
+
+tbody
+{
+    display: table-row-group;
+
+    box-sizing: border-box;
+
+    vertical-align: middle;
+}
+
+td
+{
+    display: table-cell;
+    zoom: 1;
+
+    padding: 1px;
+
+    vertical-align: middle;
+}
+
+textarea
+{
+    font-family: monospace;
+    font-size: 10pt;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    zoom: 1;
+
+    padding: 2px;
+
+    white-space: pre-wrap;
+
+    border-width: 1px;
+    background-color: #fff;
+}
+
+tfoot
+{
+    display: table-footer-group;
+
+    box-sizing: border-box;
+
+    vertical-align: middle;
+}
+
+th
+{
+    font-weight: bold;
+
+    display: table-cell;
+    zoom: 1;
+
+    padding: 1px;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+thead
+{
+    display: table-header-group;
+
+    box-sizing: border-box;
+
+    vertical-align: middle;
+}
+
+tr
+{
+    display: table-row;
+    zoom: 1;
+
+    box-sizing: border-box;
+
+    vertical-align: middle;
+}
+
+ul
+{
+    display: block;
+
+    margin: 1em 0;
+    padding: 0 0 0 30pt;
+
+    list-style-position: outside;
+    list-style-type: disc;
+    list-style-image: none;
+}
+
+var
+{
+    font-style: italic;
+}

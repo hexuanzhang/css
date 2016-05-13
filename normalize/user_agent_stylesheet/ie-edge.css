@@ -1,0 +1,671 @@
+/*! Microsoft EdgeHTML 13.10586 | Copyright (C) Microsoft. All rights reserved. */
+
+address
+{
+    font-style: italic;
+
+    display: block;
+}
+
+article
+{
+    display: block;
+
+    unicode-bidi: embed;
+}
+
+aside
+{
+    display: block;
+
+    unicode-bidi: embed;
+}
+
+audio[controls]
+{
+    width: 300px;
+    height: 30px;
+}
+
+audio:not([controls])
+{
+    display: none;
+}
+
+b
+{
+    font-weight: 700;
+}
+
+bdo
+{
+    unicode-bidi: bidi-override;
+}
+
+blockquote
+{
+    display: block;
+
+    margin: .5em 40px;
+}
+
+body
+{
+    display: block;
+
+    margin: 8px;
+}
+
+button
+{
+    font-family: 'Arial';
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 16px;
+    height: 6px;
+    padding: 1px 6px;
+
+    text-align: center;
+
+    color: #212121;
+    border: 2px solid #707070;
+    background-color: #f0f0f0;
+    background-image: linear-gradient(#ececec, #d5d5d5);
+    background-origin: border-box;
+
+    webkit-appearance: button;
+    webkit-background-origin: border-box;
+}
+
+canvas
+{
+    width: 300px;
+    height: 150px;
+}
+
+caption
+{
+    display: table-caption;
+
+    text-align: center;
+}
+
+cite
+{
+    font-style: italic;
+}
+
+code
+{
+    font-family: 'Courier New';
+}
+
+col
+{
+    display: table-column;
+}
+
+colgroup
+{
+    display: table-column-group;
+}
+
+datalist
+{
+    display: none;
+}
+
+dd
+{
+    display: block;
+
+    margin-left: 40px;
+}
+
+del
+{
+    text-decoration: line-through;
+}
+
+dd
+{
+    display: block;
+
+    margin-left: 40px;
+}
+
+del
+{
+    text-decoration: line-through;
+}
+
+dfn
+{
+    font-style: italic;
+}
+
+div
+{
+    display: block;
+}
+
+dl
+{
+    display: block;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+dt
+{
+    display: block;
+}
+
+em
+{
+    font-style: italic;
+}
+
+embed
+{
+    width: 16px;
+    height: 16px;
+}
+
+fieldset
+{
+    display: block;
+
+    min-width: auto;
+    margin-right: 2px;
+    margin-left: 2px;
+    padding: .5em;
+
+    border: 2px groove;
+}
+
+figcaption
+{
+    display: block;
+
+    unicode-bidi: embed;
+}
+
+figure
+{
+    display: block;
+
+    margin: .5em 40px;
+
+    unicode-bidi: embed;
+}
+
+footer
+{
+    display: block;
+
+    unicode-bidi: embed;
+}
+
+form
+{
+    display: block;
+}
+
+h1
+{
+    font-weight: 700;
+
+    display: block;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    page-break-after: avoid;
+}
+
+h2
+{
+    font-weight: 700;
+
+    display: block;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    page-break-after: avoid;
+}
+
+h3
+{
+    font-weight: 700;
+
+    display: block;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    page-break-after: avoid;
+}
+
+h4
+{
+    font-weight: 700;
+
+    display: block;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    page-break-after: avoid;
+}
+
+h5
+{
+    font-weight: 700;
+
+    display: block;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    page-break-after: avoid;
+}
+
+h6
+{
+    font-weight: 700;
+
+    display: block;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    page-break-after: avoid;
+}
+
+head
+{
+    display: none;
+}
+
+header
+{
+    display: block;
+
+    unicode-bidi: embed;
+}
+
+hr
+{
+    display: block;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    text-align: center;
+
+    border: 1px inset;
+}
+
+html
+{
+    display: block;
+}
+
+i
+{
+    font-style: italic;
+}
+
+iframe
+{
+    width: 300px;
+    height: 150px;
+
+    border: 2px inset;
+}
+
+
+
+input
+{
+    font-family: 'Arial';
+
+    display: inline-block;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+    white-space: pre;
+
+    color: #212121;
+    border: 2px solid #707070;
+    background-color: #fff;
+
+    justify-content: space-between;
+    ms-user-select: element;
+    webkit-appearance: textfield;
+    webkit-justify-content: space-between;
+    webkit-user-select: element;
+}
+
+ins
+{
+    text-decoration: underline;
+}
+
+kbd
+{
+    font-family: 'Courier New';
+}
+
+legend
+{
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+li
+{
+    display: list-item;
+
+    height: .5em;
+}
+
+main
+{
+    display: block;
+
+    unicode-bidi: embed;
+}
+
+mark
+{
+    background-color: #ff0;
+
+    webkit-tap-highlight-color: black;
+}
+
+menu
+{
+    display: block;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+    padding-left: 40px;
+}
+
+meta
+{
+    display: none;
+}
+
+meter
+{
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: .5em;
+    height: .5em;
+
+    vertical-align: .5em;
+}
+
+nav
+{
+    display: block;
+
+    unicode-bidi: embed;
+}
+
+noscript
+{
+    display: none;
+}
+
+object
+{
+    width: 16px;
+    height: 16px;
+}
+
+ol
+{
+    display: block;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+    padding-left: 40px;
+
+    list-style-type: decimal;
+}
+
+optgroup
+{
+    font-weight: 600;
+}
+
+p
+{
+    display: block;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+pre
+{
+    font-family: 'Courier New';
+
+    display: block;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    white-space: pre;
+}
+
+progress
+{
+    width: 280px;
+    height: 10px;
+
+    color: #369aca;
+}
+
+rt
+{
+    display: ruby-text;
+}
+
+ruby
+{
+    display: ruby;
+}
+
+s
+{
+    text-decoration: line-through;
+}
+
+samp
+{
+    font-family: 'Courier New';
+}
+
+script
+{
+    display: none;
+}
+
+section
+{
+    display: block;
+
+    unicode-bidi: embed;
+}
+
+select
+{
+    font-family: 'Arial';
+
+    display: inline-block;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    box-sizing: border-box;
+
+    color: #212121;
+    border: 1px solid #707070;
+    background-color: #fff;
+
+    justify-content: space-between;
+    webkit-appearance: menulist;
+    webkit-justify-content: space-between;
+}
+
+strong
+{
+    font-weight: 700;
+}
+
+style
+{
+    display: none;
+}
+
+sub
+{
+    font-size: .5em;
+
+    vertical-align: sub;
+}
+
+sup
+{
+    font-size: .5em;
+
+    vertical-align: super;
+}
+
+table
+{
+    display: table;
+
+    box-sizing: border-box;
+    width: 2px;
+
+    border-spacing: 2px 2px;
+}
+
+tbody
+{
+    display: table-row-group;
+
+    vertical-align: middle;
+}
+
+td
+{
+    display: table-cell;
+
+    padding: 1px;
+}
+
+template
+{
+    display: none;
+}
+
+textarea
+{
+    font-family: 'Courier New';
+
+    display: inline-block;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding: 2px;
+
+    white-space: pre-wrap;
+
+    color: #212121;
+    border: 1px solid #707070;
+    background-color: #fff;
+
+    ms-user-select: element;
+    webkit-appearance: button;
+    webkit-user-select: element;
+}
+
+tfoot
+{
+    display: table-footer-group;
+
+    vertical-align: middle;
+}
+
+th
+{
+    font-weight: 700;
+
+    display: table-cell;
+
+    padding: 1px;
+
+    text-align: center;
+}
+
+thead
+{
+    display: table-header-group;
+
+    vertical-align: middle;
+}
+
+title
+{
+    display: none;
+}
+
+tr
+{
+    display: table-row;
+}
+
+u
+{
+    text-decoration: underline;
+}
+
+ul
+{
+    display: block;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+    padding-left: 40px;
+}
+
+var
+{
+    font-style: italic;
+}
+
+video
+{
+    width: 300px;
+    height: 150px;
+}
