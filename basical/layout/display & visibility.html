@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Examples</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href="" rel="stylesheet">
+        <style>
+            div{
+                width: 300px;
+                height: 300px;
+                border: 1px solid blue;
+            }
+            .display{
+                display: none;
+            }
+            .child{
+                width: 150px;
+                height: 150px;
+            }
+            .visibility{
+                visibility: hidden;
+            }
+            #display_child{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="display" id="display_parent">
+            <div class="child" id="display_child"></div>
+        </div>
+        <button id="display_btn">设置display:none元素的子元素显示</button>
+        <div class="visibility" id="visibility_parent">
+            <div class="child" id="visibility_child"></div>
+        </div>
+        <button id="visibility_btn">设置visibility:hidden元素的子元素显示</button>
+        <script>
+            document.getElementById("display_btn").onclick = function(e) {
+                var oEle = document.getElementById("display_child"),
+                    that = e.target,
+                    oStyle = oEle.currentStyle? oEle.currentStyle : window.getComputedStyle(oEle, null),
+                    sDiaplsy = oStyle.display,
+                    sVal = that.innerText;
+
+                if(sDiaplsy === "block") {
+                    oEle.style.display = "none";
+                    that.innerText = "设置display:none元素的子元素显示";
+                } else {
+                    oEle.style.display = "block";
+                    that.innerText = "子元素设置为block";
+                }
+            }
+            document.getElementById("visibility_btn").onclick = function(e) {
+                var oEle = document.getElementById("visibility_child"),
+                    that = e.target,
+                    oStyle = oEle.currentStyle? oEle.currentStyle : window.getComputedStyle(oEle, null),
+                    sDiaplsy = oStyle.visibility,
+                    sVal = that.innerText;
+
+                if(sDiaplsy === "visible") {
+                    oEle.style.visibility = "hidden";
+                    that.innerText = "设置visibility:hidden元素的子元素显示";
+                } else {
+                    oEle.style.visibility = "visible";
+                    that.innerText = "子元素设置为visible";
+                }
+            }
+        </script>
+    </body>
+</html>
