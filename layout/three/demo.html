@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>三列自适应布局方法</title>
+        <meta name="description" content="">
+        <meta name="keywohttp://sandbox.runjs.cn/uploads/rs/183/xf5zwmxm/reset.cssrds" content="">
+        <style>
+            body
+            {
+                font-size: 14px;
+                background-color: #fff;
+            }
+            #hd,#ft
+            {
+                padding: 20px 3px;
+                text-align: center;
+                background-color: #ccc;
+            }
+            .main,
+            .main-warp
+            {
+                color: #fff;
+                background-color: #03a9f4;
+            }
+            .aside,
+            .aside-f,
+            .aside-s
+            {
+                color: #fff;
+                background-color: #00bcd4;
+            }
+            p
+            {
+                margin: 0;
+                padding: 20px;
+                text-align: center;
+            }
+            .space
+            {
+                padding: 30px 0;
+            }
+
+        /* 普通布局 */
+            .nm-3-lr,
+            .nm-3-lc,
+            .nm-3-cr
+            {
+                min-width: 400px;
+                margin: 10px 0;
+                position: relative; 
+                *zoom: 1;
+            }
+    /* 左中右 中间自适应 */
+        .nm-3-lr .aside-f{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+        }
+        .nm-3-lr .main{
+            margin: 0 210px;
+        }
+        .nm-3-lr .aside-s{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;   
+        }
+
+    /* 左中右 右侧自适应 */
+        .nm-3-lc .aside-f{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+        }
+        .nm-3-lc .main{
+            margin-left: 420px;
+        }
+        .nm-3-lc .aside-s{
+            position: absolute;
+            top: 0;
+            left: 210px;
+            width: 200px;   
+        }
+
+        /* 左中右 左侧自适应 */
+        .nm-3-cr .aside-f{
+            position: absolute;
+            top: 0;
+            right: 210px;
+            width: 200px;
+        }
+        .nm-3-cr .main{
+            margin-right: 420px;
+        }
+        .nm-3-cr .aside-s{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;   
+        }
+
+        /* 圣杯布局 */
+        .bd-3-lr,
+        .bd-3-lc,
+        .bd-3-cr
+        {
+            min-width: 400px;
+            margin: 10px 0;
+        }
+     /* 左中右 中间自适应 */
+        .bd-3-lr {
+            zoom:1;
+            overflow:hidden;
+            padding-left:210px;
+            padding-right:210px;
+        }
+        .bd-3-lr .main {
+            float:left;
+            width:100%;
+        }
+        .bd-3-lr .aside-f {
+            float: left;
+            width:200px;
+            margin-left: -100%;
+     
+            position:relative;
+            left: -210px;
+            _left: 210px; /*IE6 hack*/
+        }
+        .bd-3-lr .aside-s {
+            float: left;
+            width:200px;
+            margin-left: -200px;
+     
+            position:relative;
+            right: -210px;
+        }
+
+    /* 左中右，右侧自适应 */
+        .bd-3-lc {
+            zoom:1;
+            overflow:hidden;
+            padding-left:420px;
+        }
+        .bd-3-lc .main {
+            float:left;
+            width:100%;
+        }
+        .bd-3-lc .aside-f {
+            float: left;
+            width:200px;
+            margin-left: -100%;
+            position:relative;
+            left: -420px;
+            _left: 0px; /*IE6 hack*/
+        }
+        .bd-3-lc .aside-s {
+            float: left;
+            width:200px;
+            margin-left: -100%;
+            position:relative;
+            left: -210px;
+            _left: 210px; /*IE6 hack*/
+        }
+
+    /* 左中右，左侧自适应 */
+        .bd-3-cr{
+            overflow: hidden;
+            padding-right: 420px;
+        }
+        .bd-3-cr .main {
+            width: 100%;
+            float: left;
+        }
+        .bd-3-cr .aside-f {
+            width: 200px;
+            float: left;
+            margin-left: -200px;
+            position: relative;
+            left: 210px;
+        }
+        .bd-3-cr .aside-s {
+            width: 200px;
+            float: left;
+            margin-left: -200px;
+            position: relative;
+            left: 420px;
+        }
+
+        /* 双飞翼布局 */
+        .df-3-lr,
+        .df-3-lc,
+        .df-3-cr
+        {
+            margin: 10px 0;
+        }
+            /* 右侧栏固定宽度，左侧自适应 */
+                .df-rgt{
+                    zoom: 1;
+                    overflow: hidden;
+                }
+                .df-rgt .df-main{
+                    float: left;
+                    width: 100%;
+                }
+                .df-rgt .df-main .main-warp{
+                    margin-right: 210px;
+                }
+                .df-rgt .aside{
+                    width: 200px;
+                    margin-left: -200px;
+                    float: left;
+                }
+
+            /* 左中右 中间自适应 */
+                .df-3-lr{
+                    zoom: 1;
+                    overflow: hidden;
+                }
+                .df-3-lr .df-main{
+                    float: left;
+                    width: 100%;
+                }
+                .df-3-lr .df-main .main-warp{
+
+                    margin: 0 210px;
+                }
+                .df-3-lr .aside-f, .df-3-lr .aside-s{
+                    width: 200px;
+                    float: left;
+                }
+                .df-3-lr .aside-f{
+
+                    margin-left: -100%;
+                }
+                .df-3-lr .aside-s{
+
+                    margin-left: -200px;
+                }
+
+            /* 左中右 右侧自适应 */
+                .df-3-lc{
+                    zoom: 1;
+                    overflow: hidden;
+                }
+                .df-3-lc .df-main{
+                    width: 100%;
+                    float: left;
+                }
+                .df-3-lc .df-main .main-warp{
+                    
+                    margin-left: 420px;
+                }
+                .df-3-lc .aside-f, .df-3-lc .aside-s{
+                    width: 200px;
+                    float: left;
+                }
+                .df-3-lc .aside-f{
+                    margin-left: -100%;
+                }
+                .df-3-lc .aside-s{
+                    margin-left: -100%;
+                    position: relative;
+                    left: 210px;
+                }
+
+            /* 左中右 左侧自适应 */
+                .df-3-cr{
+                    zoom: 1;
+                    overflow: hidden;
+                }
+                .df-3-cr .df-main{
+                    width: 100%;
+                    float: left;
+                }
+                .df-3-cr .df-main .main-warp{
+                    margin-right: 420px;
+                }
+                .df-3-cr .aside-f, .df-3-cr .aside-s{
+                    width: 200px;
+                    float: left;
+                }
+                .df-3-cr .aside-f{
+                    margin-left: -200px;
+                    position: relative;
+                    right: 210px;
+                }
+                .df-3-cr .aside-s{
+                    margin-left: -200px;
+                }
+        </style>
+    </head>
+    <body>
+        <div id="hd">三列自适应布局--头部</div>
+        <div class="nm-3-lr">
+            <div class="aside-f">
+                <p>侧边栏1固定宽度</p>
+            </div>
+            <div class="main">
+                <p>绝对定位-主内容栏自适应宽度</p>
+            </div>
+            <div class="aside-s">
+                <p>侧边栏2固定宽度</p>
+            </div>
+        </div>
+        <div class="nm-3-lc">
+            <div class="aside-f">
+                <p>侧边栏1固定宽度</p>
+            </div>
+            <div class="main">
+                <p>绝对定位-主内容栏自适应宽度</p>
+            </div>
+            <div class="aside-s">
+                <p>侧边栏2固定宽度</p>
+            </div>
+        </div>
+        <div class="nm-3-cr">
+            <div class="aside-f">
+                <p>侧边栏1固定宽度</p>
+            </div>
+            <div class="main">
+                <p>绝对定位-主内容栏自适应宽度</p>
+            </div>
+            <div class="aside-s">
+                <p>侧边栏2固定宽度</p>
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="bd-3-lr">
+            <div class="main">
+                <p>圣杯布局-主内容栏自适应宽度</p>
+            </div>
+            <div class="aside-f">
+                <p>侧边栏1固定宽度</p>
+            </div>
+            <div class="aside-s">
+                <p>侧边栏2固定宽度</p>
+            </div>
+        </div>
+        <div class="bd-3-lc">
+            <div class="main">
+                <p>圣杯布局-主内容栏自适应宽度</p>
+            </div>
+            <div class="aside-f">
+                <p>侧边栏1固定宽度</p>
+            </div>
+            <div class="aside-s">
+                <p>侧边栏2固定宽度</p>
+            </div>
+        </div>
+        <div class="bd-3-cr">
+            <div class="main">
+                <p>圣杯布局-主内容栏自适应宽度</p>
+            </div>
+            <div class="aside-f">
+                <p>侧边栏1固定宽度</p>
+            </div>
+            <div class="aside-s">
+                <p>侧边栏2固定宽度</p>
+            </div>
+        </div>
+        <div class="space"></div>
+        
+        <div class="df-3-lr">
+            <div class="df-main">
+                <div class="main-warp">
+                    <p>双飞翼布局-主内容栏自适应宽度</p>
+                </div>
+            </div>
+            <div class="aside-f">
+                <p>侧边栏1固定宽度</p>
+            </div>
+            <div class="aside-s">
+                <p>侧边栏2固定宽度</p>
+            </div>
+        </div>
+        <div class="df-3-lc">
+            <div class="df-main">
+                <div class="main-warp">
+                    <p>双飞翼布局-主内容栏自适应宽度</p>
+                </div>
+            </div>
+            <div class="aside-f">
+                <p>侧边栏1固定宽度</p>
+            </div>
+            <div class="aside-s">
+                <p>侧边栏2固定宽度</p>
+            </div>
+        </div>
+        <div class="df-3-cr">
+            <div class="df-main">
+                <div class="main-warp">
+                    <p>双飞翼布局-主内容栏自适应宽度</p>
+                </div>
+            </div>
+            <div class="aside-f">
+                <p>侧边栏1固定宽度</p>
+            </div>
+            <div class="aside-s">
+                <p>侧边栏2固定宽度</p>
+            </div>
+        </div>
+        
+        <div class="space"></div>
+        <div id="ft">三列自适应布局--底部</div>
+    </body>
+</html>
