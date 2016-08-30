@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>数值计算游戏</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			body{
+				counter-reset: sum;
+			}
+			input{
+				position: absolute;
+				clip: rect(0 0 0 0);
+			}
+			#num64:checked{
+				counter-increment: sum 64;
+			}
+			#num16:checked{
+				counter-increment: sum 16;
+			}
+			#num-32:checked{
+				counter-increment: sum -32;
+			}
+			#num128:checked{
+				counter-increment: sum 128;
+			}
+			#num4:checked{
+				counter-increment: sum 4;
+			}
+			#num-8:checked{
+				counter-increment: sum -8;
+			}
+			.sum:before{
+				content: '= ' counter(sum);
+			}
+			#num64:checked ~
+			#num16:checked ~
+			#num-32:not(:checked) ~
+			#num128:not(:checked) ~
+			#num4:not(:checked) ~
+			#num-8:checked ~
+			.sum::after {
+				content: ' (万岁！)';
+			}
+			label, .sum {
+			    display: inline-block;
+			    min-width: 80px;
+			    line-height: 40px;
+			    margin-bottom: 10px;
+			    text-align: center;
+			    font: bold 20px/40px 'microsoft yahei';
+			    background-color: #beceeb;
+			    cursor: pointer;
+			}
+			input:checked + label {
+			    background-color: #cd0000;
+			    color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<p><strong>选择下面的数值，使其计算结果为72：</strong></p>
+		<input type="checkbox" id="num64"><label for="num64">64</label>
+		<input type="checkbox" id="num16"><label for="num16">+16</label>
+		<input type="checkbox" id="num-32"><label for="num-32">-32</label>
+		<input type="checkbox" id="num128"><label for="num128">+128</label>
+		<input type="checkbox" id="num4"><label for="num4">+4</label>
+		<input type="checkbox" id="num-8"><label for="num-8">-8</label>
+		<strong class="sum"></strong>
+	</body>
+</html>

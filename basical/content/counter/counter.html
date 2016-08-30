@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>counter计数器</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			body{
+				counter-reset: counters;
+			}
+			input:checked{
+				counter-increment: counters;
+			}
+			.total:after{
+				content: counter(counters);
+				color: #03a9f4;
+			}
+		</style>
+	</head>
+	<body>
+		<strong>下面旅游城市你去过几个？</strong>
+		<ol>
+			<li><input type="checkbox" id="qd"><label for="qd">青岛</label></li>
+			<li><input type="checkbox" id="xm"><label for="xm">厦门</label></li>
+			<li><input type="checkbox" id="hs"><label for="hs">黄山</label></li>
+			<li><input type="checkbox" id="wz"><label for="wz">乌镇</label></li>
+			<li><input type="checkbox" id="jn"><label for="jn">济南</label></li>
+			<li><input type="checkbox" id="ly"><label for="ly">临沂</label></li>
+			<li><input type="checkbox" id="xsba"><label for="xsba">西双版纳</label></li>
+			<li><input type="checkbox" id="qdh"><label for="qdh">千岛湖</label></li>
+			<li><input type="checkbox" id="lj"><label for="lj">丽江</label></li>
+			<li><input type="checkbox" id="sy"><label for="sy">三亚</label></li>
+		</ol>
+		你总共选择了<strong class="total"></strong>座城市！
+	</body>
+</html>
