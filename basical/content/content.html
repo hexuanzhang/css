@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Examples</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			strong{
+				color: #3d76c2;
+			}
+			h1,h2,h3,div{
+				margin-left: 30px;
+				color: #03a9f4;
+			}
+			.demo{
+				margin: 16px 0;
+				padding: 0;
+			}
+			.demo li:first-child{
+				counter-reset: demo;
+			}
+			.demo li:before{
+				counter-increment: demo;
+				content: counter(demo)".";
+			}
+			.content_none h2:after{
+				content: "增加的内容"
+			}
+			.content_none h3:after{
+				content: none;
+			}
+
+			.content_quote h2{
+			    quotes:"(" ")";  /*利用元素的quotes属性指定文字符号*/
+			}
+			.content_quote h2::before{
+			    content:open-quote;
+			}
+			.content_quote h2::after{
+			    content:close-quote;
+			}
+			.content_quote h3{
+			    quotes:"\"" "\"";  /*添加双引号要转义*/
+			}
+			.content_quote h3::before{
+			    content:open-quote;
+			}
+			.content_quote h3::after{
+			    content:close-quote;
+			}
+
+			.content_img h2:after{
+				content:url(http://ido321.qiniudn.com/wp-content/themes/yusi1.0/img/new.gif);
+			}
+
+			.content_attr a:after{
+				content: " "attr(href);
+			}
+
+			.content_counter h3{
+				counter-increment: content_counter;
+			}
+			.content_counter h3:before{
+				content: counter(content_counter)".";
+			}
+
+			.content_counter_style h3{
+				counter-increment: content_counter;
+			}
+			.content_counter_style h3:before{
+				content:counter(content_counter, upper-alpha);
+			}
+
+			.content_counter_nest h1:before{
+				content: counter(h1);
+			}
+			.content_counter_nest h1{
+				counter-increment: h1;
+				counter-reset: h2;
+			}
+			.content_counter_nest h2:before{
+				content: counter(h1)"."counter(h2);
+			}
+			.content_counter_nest h2{
+				counter-increment: h2;
+				counter-reset: h3;
+				margin-left: 45px;
+			}
+			.content_counter_nest h3:before{
+				content: counter(h1)"."counter(h2)"."counter(h3);
+			}
+			.content_counter_nest h3{
+				counter-increment: h3;
+				margin-left: 60px;
+			}
+
+			.content_counters .reset{
+				counter-reset: counters;
+			}
+			.content_counters .counter:before{
+				content: counters(counters, ".");
+				counter-increment: counters;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="demo">
+			<li class="content_none">
+				<strong>content: "插入的文章"，或者content:none不插入内容</strong>
+				<h2>标题</h2>
+				<h3>标题</h3>
+			</li>
+			<li class="content_quote">
+				<strong>可以使用content属性的open-quote属性值和close-quote属性值在字符串两边添加诸如括号、单引号、双引号之类的嵌套文字符号。open-quote用于添加开始的文字符号，close-quote用于添加结束的文字符号。</strong>
+				<h2>标题</h2>
+				<h3>标题</h3>
+			</li>
+			<li class="content_img">
+				<strong>content属性也可以直接在元素前/后插入图片。</strong>
+				<h2>标题</h2>
+			</li>
+			<li class="content_attr">
+				<strong>content属性可以直接利用attr获取元素的属性，将其插入到对应位置。</strong>
+				<h3>
+					<a href="https://github.com/">链接到github</a>
+				</h3>
+			</li>
+			<li class="content_counter">
+				<strong>利用content的counter属性针对多个项目追加连续编号。</strong>
+				<h3>大标题</h3>
+				<h3>大标题</h3>
+				<h3>大标题</h3>
+			</li>
+			<li class="content_counter_style">
+				<strong>利用content(计数器名，编号种类)格式的语法指定编号种类，编号种类的参考可以依据ul的list-style-type属性值。</strong>
+				<h3>大标题</h3>
+				<h3>大标题</h3>
+				<h3>大标题</h3>
+			</li>
+			<li class="content_counter_nest">
+				<strong>编号嵌套</strong>
+				<h1>大标题</h1>
+				<h2>中标题</h2>
+				<h3>小标题</h3>
+				<h1>大标题</h1>
+				<h2>中标题</h2>
+				<h3>小标题</h3>
+				<h2>中标题</h2>
+				<h3>小标题</h3>
+				<h1>大标题</h1>
+				<h2>中标题</h2>
+				<h3>小标题</h3>
+				<h2>中标题</h2>
+				<h3>小标题</h3>
+				<h2>中标题</h2>
+				<h3>小标题</h3>
+			</li>
+			<li class="content_counters">
+				<strong>有序列表嵌套</strong>
+				<div class="reset">
+				    <div class="counter">大标题
+				        <div class="reset">
+				            <div class="counter">中标题</div>
+				            <div class="counter">中标题
+				                <div class="reset">
+				                    <div class="counter">小标题</div>
+				                    <div class="counter">小标题</div>
+				                    <div class="counter">小标题</div>
+				                </div>
+				            </div>
+				            <div class="counter">中标题</div>
+				        </div>
+				    </div>
+				    <div class="counter">大标题</div>
+				    <div class="counter">大标题
+				        <div class="reset">
+				            <div class="counter">中标题</div>
+				        </div>
+				    </div>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>
