@@ -1,75 +1,107 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 /**
  * 
  * @authors Your Name (you@example.org)
  * @date    2016-05-11 11:24:40
  * @version $Id$
  */
-head{
-	display: none; /* all */
-}
-body{
-	margin: 8px; /* IE 8/9、Chrome、Firefox */
-	margin: 15px 10px; /* IE 6/7 */
-}
-progress{
-	vertical-align: -0.2em; /* Chrome、Firefox*/
-	vertical-align: baseline; /* IE */
-}
-[hidden]{
-	display: block; /* IE 7/8/9、Firefox 3及Safari 4 */
-	display: inline-block; /* IE 7/8/9、Firefox 3及Safari 4 */
-	display: none;
-}
-abbr[title]{
-	text-decoration: underline dotted; /* Firefox */
-	text-decoration: none; /* Chrome IE */
-}
-strong, b{
-	font-weight: bold; /* Chrome IE */
-	font-weight: bolder; /* Firefox */
-}
-h1{
-	font-size: 24pt; /* IE 6/7 */
-	font-size: 2em; /* IE 8/9 Chrome Firefox */
 
-	margin: 14pt 0; /* IE 6/7 */
-	margin: .67em 0; /* IE 8/9 Chrome Firefox */
+html
+{
+    display: block; /* IE 8/edge Chrome Firefox Safari */
+    overflow-x: auto; /* IE 6/7 */
+    overflow-y: scroll; /* IE 6/7 */
+    zoom: 1; /* IE 6/7/8 */
 }
-h2{
-	font-size: 18pt; /* IE 6/7 */
-	font-size: 1.5em; /* IE 8/9 Chrome Firefox */
+body
+{
+    margin: 8px; /* IE 8/9 Chrome Firefox Safari */
+    margin: 15px 10px; /* IE 6/7 */
+}
+h1
+{
+    font-size: 24pt; /* IE 6/7 */
+    font-size: 2em; /* IE 8/9 Chrome Firefox Safari */
 
-	margin: 14pt 0; /* IE 6/7 */
-	margin: .83em 0; /* IE 8/9 Chrome Firefox */
+    margin: 14pt 0; /* IE 6/7 */
+    margin: .67em 0; /* IE 8/9 Chrome Firefox Safari */
 }
-h3{
-	font-size: 13.55pt; /* IE 6/7 */
-	font-size: 1.17em; /* IE 8/9 Chrome Firefox */
+h2
+{
+    font-size: 18pt; /* IE 6/7 */
+    font-size: 1.5em; /* IE 8/9 Chrome Firefox Safari */
 
-	margin: 14pt 0; /* IE 6/7 */
-	margin: 1em 0; /* IE 8/9 Chrome Firefox */
+    margin: 14pt 0; /* IE 6/7 */
+    margin: .83em 0; /* IE 8/9 Chrome Firefox Safari */
 }
-h4{
-	font-size: 1em; /* IE 8/9  */
+h3
+{
+    font-size: 13.55pt; /* IE 6/7 */
+    font-size: 1.17em; /* IE 8/9 Chrome Firefox */
 
-	margin: 14pt 0; /* IE 6/7 */
-	margin: 1.33em 0; /* IE 8/9 Chrome Firefox */
+    margin: 14pt 0; /* IE 6/7 */
+    margin: 1em 0; /* IE 8/9 Chrome Firefox Safari */
 }
-h5{
-	font-size: 10pt; /* IE 6/7 */
-	font-size: .83em; /* IE 8/9 Chrome Firefox */
+h4
+{
+    font-size: 1em; /* IE 8/9  */
 
-	margin: 14pt 0; /* IE 6/7 */
-	margin: 1.67em 0; /* IE 8/9 Chrome Firefox */
+    margin: 14pt 0; /* IE 6/7 */
+    margin: 1.33em 0; /* IE 8/9 Chrome Firefox Safari */
 }
-h6{
-	font-size: 7.55pt; /* IE 6/7 */
-	font-size: .67em; /* IE 8/9 Chrome Firefox */
+h5
+{
+    font-size: 10pt; /* IE 6/7 */
+    font-size: .83em; /* IE 8/9 Chrome Firefox Safari */
 
-	margin: 14pt 0; /* IE 6/7 */
-	margin: 2.33em 0; /* IE 8/9 Chrome Firefox */	
+    margin: 14pt 0; /* IE 6/7 */
+    margin: 1.67em 0; /* IE 8/9 Chrome Firefox */
 }
-mark{
-	
+h6
+{
+    font-size: 7.55pt; /* IE 6/7 */
+    font-size: .67em; /* IE 8/9 Chrome Firefox Safari */
+
+    margin: 14pt 0; /* IE 6/7 */
+    margin: 2.33em 0; /* IE 8/9 Chrome Firefox Safari */
+}
+p
+{
+    margin: 14pt 0; /* IE 6/7 */
+    margin: 1em 0; /* IE 8/9 */
+    margin: .5em 0; /* IE edge */
+    margin: 1em 0; /* Safari */
+    margin: 0 1em; /* Chrome、Firefox*/
+}
+hr
+{
+    margin: .5em auto; /* IE 9/edge Chrome Firefox Safari */
+}
+progress
+{
+    vertical-align: -.2em; /* Chrome、Firefox*/
+    vertical-align: baseline; /* IE */
+}
+[hidden]
+{
+    display: block; /* IE 7/8/9、Firefox 3及Safari 4 */
+    display: inline-block; /* IE 7/8/9、Firefox 3及Safari 4 */
+    display: none;
+}
+abbr[title]
+{
+    text-decoration: underline dotted; /* Firefox */
+    text-decoration: none; /* Chrome IE */
+}
+strong,
+b
+{
+    font-weight: bold; /* Chrome IE */
+    font-weight: bolder; /* Firefox */
+}
+
+mark
+{
+    background-color: #ff0; /* IE edge*/
+    background-color: yellow; /* Safari Chrome Firefox */
 }
