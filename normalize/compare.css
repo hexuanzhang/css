@@ -77,31 +77,306 @@ hr
 {
     margin: .5em auto; /* IE 9/edge Chrome Firefox Safari */
 }
-progress
+b
 {
-    vertical-align: -.2em; /* Chrome、Firefox*/
-    vertical-align: baseline; /* IE */
+    font-weight: bold; /* IE 6/7/8/9 */
+    font-weight: 700; /* IE edge */
 }
-[hidden]
+blockquote
 {
-    display: block; /* IE 7/8/9、Firefox 3及Safari 4 */
-    display: inline-block; /* IE 7/8/9、Firefox 3及Safari 4 */
-    display: none;
+    margin: 14pt 30pt; /* IE 6/7 */
+    margin: 1em 40px; /* IE 8/9 Chrome Firefox Safari */
+    margin: .5em 40px; /* IE edge */
 }
+q:before
+{
+    content: open-quote; /* Chrome Firefox Safari */
+}
+
+q:after
+{
+    content: close-quote; /* Chrome Firefox Safari */
+}
+textarea
+{
+    font-family: monospace; /* IE 6/7/8/9 */
+    font-family: 'Courier New'; /* IE edge */
+
+    padding: 1px; /* IE 6 */
+    padding: 2px; /* IE 7/8/9 edge */
+
+    white-space: pre; /* IE 6/7 */
+    white-space: pre-wrap; /* IE 8/9 edge */
+
+    border: 1px solid #707070; /* IE edge */
+    border-width: 2px; /* IE 6/7 */
+    border-width: 1px; /* IE 8/9 */
+    border-style: inset; /* IE 6 */
+}
+button
+{
+    font-family: sans-serif; /* IE 6/7/8/9 */
+    font-family: 'Arial'; /* IE edge */
+
+    width: 16px; /* IE edge */
+    height: 6px; /* IE edge */
+    padding: 1px 6px; /* IE edge */
+    padding: 1px 8px; /* IE 8/9 */
+
+    color: #212121; /* IE edge */
+    border: 2px solid #707070; /* IE edge */
+    border-width: 2px; /* IE 6/7 */
+    border-width: 3px; /* IE 8/9 */
+    border-style: outset; /* IE 6 */
+    background-color: #d4d0c8; /* IE 6 */
+    background-color: #f0f0f0; /* IE 7/8/9 edge */
+}
+select
+{
+    font-family: sans-serif; /* IE 6/7/8/9 */
+    font-family: 'Arial'; /* IE edge */
+    font-size: 10pt; /* IE 6/7/8/9 */
+
+    color: #212121; /* IE edge */
+    border: 1px solid #707070; /* IE edge */
+    border-width: 2px; /* IE 6/7 */
+    border-width: 1px; /* IE 8/9 */
+    border-style: inset; /* IE edge */
+}
+fieldset
+{
+    margin: 0 2px; /* IE 8/9 edge Safari */
+    padding: .5em; /* IE edge */
+    padding: 0 2px 3px; /* IE 7/8/9 */
+    padding: .35em .75em .625em; /* Safari */
+
+    border: 2px groove; /* IE 6/7/8/9 edge */
+    border: 2px groove ThreeDFace; /* Safari */
+}
+legend
+{
+    padding: 0 2px; /* IE 7/8/9 edge Safari */
+}
+iframe
+{
+    width: 300px; /* IE 7/8/9 edge */
+    height: 150px; /* IE 7/8/9 edge */
+
+    border: 2px inset; /* IE 9 Chrome Firefox Safari */
+}
+a
+{
+    color: #00f; /* IE 6 */
+    color: #06c; /* IE 7/8/9 */
+}
+a:visited
+{
+    color: #80080; /* IE 6/7/8/9 */
+}
+ul
+{
+    margin: 14pt 0 14pt 30pt; /* IE 6/7 */
+    margin: 1em 0; /* IE 8/9 Safari */
+    margin: .5em 0; /* IE edge */
+    margin: 0 1em;  /* Chrome Firefox */
+    padding: 0 0 0 30pt; /* IE 8/9 */
+    padding: 0 0 0 40px; /* IE edge Safari Chrome Firefox */
+}
+ol
+{
+    margin: .5em 0; /* IE 6/edge */
+    margin: 14pt 0 14pt 30pt; /* IE 7 */
+    margin: 1em; /* IE 8/9 Safari Chrome Firefox */
+    padding-left: 30pt; /* IE 8/9 */
+    padding-left: 40px; /* IE edge Safari Chrome Firefox */
+}
+li
+{
+    display: block; /* IE 6/7 */
+    display: list-item; /* IE 8/9/edge Safari Chrome Firefox */
+
+    height: .5em; /* IE edge */
+}
+dl
+{
+    margin: 14pt 0; /* IE 6/7 */
+    margin: 1em 0; /* IE 8/9 Safari */
+    margin: .5em 0; /* IE edge */
+    margin: 0 1em; /* Chrome Firefox */
+}
+dd
+{
+    margin-left: 30pt; /* IE 6/7 */
+    margin-left: 40px; /* IE 8/9/edge Safari Chrome Firefox */
+}
+table
+{
+    display: block; /* IE 6/7 */
+    display: table; /* IE 8/9/edge Safari Chrome Firefox */
+
+    border-spacing: 2px; /* IE 8/9/edge Safari Chrome Firefox */
+
+    border-color: #d4d0c8; /* IE 6 */
+    border-color: #f0f0f0; /* IE 7/8/9 */
+    border-color: gray; /* Safari */
+}
+thead,
+tbody,
+tfoot
+{
+    display: block; /* IE 6/7 */
+    display: table-row-group; /* IE 8/9/edge Safari Chrome Firefox */
+
+    vertical-align: middle; /* IE 8/9/edge Safari Chrome Firefox */
+
+    border-color: #d4d0c8; /* IE 6 */
+    border-color: #f0f0f0; /* IE 7 */
+    border-color: inherit; /* Safari Chrome Firefox */
+}
+tr
+{
+    display: block; /* IE 6/7 */
+    display: table-row; /* IE 8/9/edge Safari Chrome Firefox */
+
+    vertical-align: middle; /* IE 8/9 Chrome Firefox */
+    vertical-align: inherit; /* Safari */
+
+    border-color: #d4d0c8; /* IE 6 */
+    border-color: #f0f0f0; /* IE 7 */
+    border-color: inherit; /* Safari Chrome Firefox */
+}
+th
+{
+    display: block; /* IE 6/7 */
+    display: table-cell; /* IE 8/9/edge Safari Chrome Firefox */
+
+    padding: 1px; /* IE 6/7/8/9/edge */
+
+    text-align: center; /* IE 6/7/8/9/edge */
+    vertical-align: middle; /* IE 6/7/8/9 */
+    vertical-align: inherit; /* Safari Chrome Firefox */
+
+    border-color: #d4d0c8; /* IE 6 */
+    border-color: #f0f0f0; /* IE 7 */
+}
+td
+{
+    display: block; /* IE 6/7 */
+    display: table-cell; /* IE 8/9/edge Safari Chrome Firefox */
+
+    padding: 1px; /* IE 6/7/8/9/edge Chrome Firefox */
+
+    text-align: inherit; /* Chrome Firefox */
+    vertical-align: middle; /* IE 8/9 */
+    vertical-align: inherit; /* Safari Chrome Firefox */
+
+    border-color: #d4d0c8; /* IE 6 */
+    border-color: #f0f0f0; /* IE 7 */
+}
+col
+{
+    display: block; /* IE 6/7 */
+    display: table-column; /* IE 8/9/edge Safari Chrome Firefox */
+
+    border-color: #d4d0c8; /* IE 6 */
+    border-color: #f0f0f0; /* IE 7 */
+}
+
+colgroup
+{
+    display: block; /* IE 6/7 */
+    display: table-column-group; /* IE 8/9/edge Safari Chrome Firefox */
+
+    border-color: #d4d0c8; /* IE 6 */
+    border-color: #f0f0f0; /* IE 7 */
+}
+
 abbr[title]
 {
-    text-decoration: underline dotted; /* Firefox */
-    text-decoration: none; /* Chrome IE */
+    text-decoration: underline dotted; /* Chrome Firefox */
 }
 strong,
 b
 {
-    font-weight: bold; /* Chrome IE */
-    font-weight: bolder; /* Firefox */
+    font-weight: bold; /* IE 6/7/8/9 Safari */
+    font-weight: 700; /* IE edge */
+    font-weight: bolder; /* Chrome Firefox */
+}
+object{
+    width: 16px; /* IE edge */
+    height: 16px; /* IE edge */
+}
+sub{
+    vertical-align: sub; /* IE edge Safari Chrome Firefox */
+}
+sup{
+    vertical-align: super; /* IE edge Safari Chrome Firefox */
+}
+sub,sup{
+    font-size: 10pt; /* IE 6/7 */
+    font-size: 0.83em; /* IE 8/9 */ 
+    font-size: .5rem; /* IE edge */
+    font-size: smaller; /* Safari Chrome Firefox */
 }
 
+
+
+/* HTML5新标签 */
 mark
 {
-    background-color: #ff0; /* IE edge*/
-    background-color: yellow; /* Safari Chrome Firefox */
+    color: black; /* Chrome Firefox Safari */
+    background: yellow; /* Chrome Firefox Safari */
+    background-color: #ff0; /* IE edge */
+
+    webkit-tap-highlight-color: black; /* IE edge */
+}
+meter
+{
+    width: .5em; /* IE edge */
+    width: 5em; /* Safari */
+    height: .5em; /* IE edge */
+    height: 1em; /* Safari */
+
+    vertical-align: .5em; /* IE edge */
+    vertical-align: -.2em; /* Safari */
+
+    -webkit-appearance: meter; /* Safari */
+}
+progress
+{
+    width: 280px; /* IE edge */
+    width: 10em; /* Safari */
+    height: 10px; /* IE edge */
+    height: 1em; /* Safari */
+
+    vertical-align: -.2em; /* Safari */
+
+    color: #369aca; /* IE edge */
+}
+datalist
+{
+    display: none; /* Chrome Firefox Safari */
+}
+keyen
+{
+    border-radius: 5px; /* Safari */
+}
+
+figure
+{
+    margin: .5em 40px; /* IE edge */
+    margin: 1em 40px; /* Chrome Firefox Safari */
+}
+
+audio[controls]
+{
+    width: 300px; /* IE edge */
+    height: 30px; /* IE edge */
+}
+video
+{
+    width: 300px; /* IE edge */
+    height: 150px; /* IE edge */
+
+    object-fit: contain; /* Chrome Firefox */
 }
