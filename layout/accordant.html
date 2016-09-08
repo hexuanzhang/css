@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>等高布局</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			.container {
+				width: 960px;
+			}
+			.rightWrap {
+				width: 100%;
+				float: left;
+				background: green;
+				overflow: hidden;
+				position: relative;
+			}
+			.contentWrap {
+				float: left;
+				background: orange;
+				width: 100%;
+				position: relative;
+				right: 320px;/*此值等于rightSidebar的宽度*/
+			}
+			.leftWrap{
+				width: 100%;
+				background: lime;
+				float:left;
+				position: relative;
+				right: 420px;/*此值等于Content的宽度*/
+			}
+			#left {
+				float: left;
+				width: 220px;
+				overflow: hidden;
+				position: relative;
+				left: 740px;
+			}
+			#content {
+				float: left;
+				width: 420px;
+				overflow: hidden;
+				position: relative;
+				left: 740px;
+			}
+			#right {
+				float: left;
+				overflow: hidden;
+				width: 320px;
+				background: #333;
+				position: relative;
+				left: 740px;
+			}
+
+			#two-container {
+				overflow: hidden;
+				width: 960px;
+			}
+			
+			.two-column {
+				background: #ccc;
+				float: left;
+				width: 200px;
+				margin-right: 5px;
+				margin-bottom: -99999px;
+				padding-bottom: 99999px;
+			}
+			
+			#two-content {
+				background: #eee;
+			}
+			
+			#two-right {
+				float: right;
+				width: 550px;
+				margin-right: 0;
+			}
+
+			#wrapper {
+				width: 960px;
+			}
+			#mainContent {
+				border-right: 220px solid #ccc;
+				background: orange;
+				position: absolute;
+				width: 740px;
+			}
+			#sidebar {
+				background: blue;
+				margin-left: 740px;
+				position: absolute;
+				width: 220px;
+			}
+		</style>
+	</head>
+	<body>
+		1.给容器div使用单独的背景色（固定布局）
+		<br>
+		优点：这种方法是不需要借助其他东西（javascript,背景图等）,而是纯CSS和HTML实现的等高列布局，并且能兼容所有浏览器（包括IE6），并且可以很容易创建任意列数。
+		<br>
+		缺点：这种方法不像其他方法一样简单明了，给你理解会带来一定难度，但是只要你理解清楚了，将能帮你创建任意列数的等高布局效果。
+		<div class="container">
+			<div class="rightWrap">
+				<div class="contentWrap">
+					<div class="leftWrap">
+						<div class="aside column leftSidebar" id="left">left</div>
+						<div id="content" class="column section">content</div>
+						<div class="aside rightSidebat column" id="right">right</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		2.使用正padding和负margin对冲实现多列布局方法
+		<br>
+		优点：这种可能实现多列等高布局，并且也能实现列与列之间分隔线效果，结构简单，兼容所有浏览器
+		<br>
+		缺点：这种方法存在一个很大的缺陷，那就是如果要实现每列四周有边框效果，那么每列的底部（或顶部）将无法有边框效果
+		<br>
+		<div id="two-container">
+			<div class="two-column aside">
+				<p>Sidebar</p>
+			</div>
+			<div id="two-content" class="two-column">
+				<p>Main content</p>
+			</div>
+			<div id="two-right" class="two-column">
+				<p>Sidebar</p>
+			</div>			
+		</div>
+		<br><br>
+		3.使用边框和定位模拟列等高
+		<br>
+		优点：结构简单，兼容各浏览器，容易掌握。
+		<br>
+		缺点：这个方法就是无法单独给主内容列设置背景色，并且实现多列效果效果不佳。
+		<br>
+		<div id="wrapper">
+			<div id="mainContent">...</div>
+			<div id="sidebar">...</div>
+		</div>
+		<br><br>
+		<a href="http://www.w3cplus.com/css/creaet-equal-height-columns">参考链接</a>
+	</body>
+</html>
