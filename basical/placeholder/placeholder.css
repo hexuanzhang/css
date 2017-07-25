@@ -1,0 +1,50 @@
+label {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input {
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;
+    transition: all .3s ease-in;
+}
+
+input:hover {
+    border-color: #35c8e6;
+}
+
+input:focus {
+    box-shadow: 0 0 4px 0 #3BD5F5;
+}
+
+input::-moz-placeholder {
+    color: #ccc;
+    font-size: 30px;
+    opacity: 1;
+}
+
+input:-moz-placeholder {
+    color: #ccc;
+    font-size: 30px;
+    opacity: 1;
+}
+
+input:-ms-input-placeholder {
+    color: #ccc;
+    font-size: 30px;
+}
+
+input::-webkit-input-placeholder {
+    color: #ccc;
+    line-height: 1.5;
+    font-size: 30px;
+}
+
+input:placeholder-shown {
+    color: #ccc;
+    font-size: 30px;
+}
