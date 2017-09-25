@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>focus-within</title>
+    <style>
+        input {
+            border: 1px solid #e5e5e5 !important;
+            border-radius: 3px;
+            font-size: 13px;
+            padding: 5px 10px;
+        }
+
+        input:hover {
+            border-color: #35c8e6 !important;
+        }
+
+        input:focus {
+            box-shadow: 0 0 4px 0 #3BD5F5 !important;
+        }
+
+        .form-group:focus-within {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-group">
+        <label for="email">邮箱: </label>
+        <input type="email" name="email" id="email" placeholder="请输入邮箱地址"/>
+    </div>
+</body>
+</html>
