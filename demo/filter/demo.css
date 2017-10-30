@@ -1,45 +1,347 @@
-.preview {
-    margin: 10px 20px 20px;
+.preview
+{
+    float: left;
+
+    width: 400px;
+    height: 300px;
+    margin: 20px;
 }
-.preview img{
-    width: 100%;
-    vertical-align: top!important;
-    margin: 0!important;
+img
+{
     visibility: hidden!important;
+
+    width: 100%;
+    margin: 0!important;
+
+    vertical-align: top!important;
+
     opacity: 0;
 }
 
-.watercolor-effect {
+.watercolor-effect
+{
     background-image: url(photo.jpg);
-    background-size: cover;
     background-position: center;
+    background-size: cover;
 }
-@supports (filter: blur(2px)) and (mix-blend-mode: multiply) {
-    .watercolor-effect {
+@supports (filter: blur(2px)) and (mix-blend-mode: multiply)
+{
+    .watercolor-effect
+    {
         position: relative;
+
         overflow: hidden;
     }
-    .watercolor-effect:before, .watercolor-effect:after {
-        display: block;
-        content: "";
+    .watercolor-effect:before,
+    .watercolor-effect:after
+    {
         position: absolute;
         top: 0;
-        left: 0;
         right: 0;
         bottom: 0;
+        left: 0;
+
+        display: block;
+
+        content: '';
+
         background-size: cover;
     }
-    .watercolor-effect:before {
+    .watercolor-effect:before
+    {
         background-image: url(photo.jpg), url(photo.jpg);
-        background-blend-mode: difference;
         background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
-        filter: brightness(2) invert(1) grayscale(1);
         box-shadow: inset 0 0 0 1px black;
+
+        background-blend-mode: difference;
+        filter: brightness(2) invert(1) grayscale(1);
     }
-    .watercolor-effect:after {
+    .watercolor-effect:after
+    {
         background-image: url(photo.jpg);
         background-position: center;
+
         mix-blend-mode: multiply;
         filter: brightness(1.3) blur(2px) contrast(2);
     }
 }
+
+/* 镜像效果-水平 */
+.mirror-x-effect
+{
+    background-image: url(photo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+@supports (transform: scaleX(-1))
+{
+    .mirror-x-effect
+    {
+        position: relative;
+    }
+    .mirror-x-effect:before,
+    .mirror-x-effect:after
+    {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        display: block;
+
+        content: '';
+
+        background: inherit;
+    }
+    .mirror-x-effect:before
+    {
+        right: 50%;
+        left: 0;
+
+        transform: scaleX(-1);
+    }
+    .mirror-x-effect:after
+    {
+        right: 0;
+        left: 50%;
+    }
+}
+
+/* 镜像效果-垂直 */
+.mirror-y-effect
+{
+    background-image: url(photo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+@supports (transform: scaleY(-1))
+{
+    .mirror-y-effect
+    {
+        position: relative;
+    }
+    .mirror-y-effect:before,
+    .mirror-y-effect:after
+    {
+        position: absolute;
+        right: 0;
+        left: 0;
+
+        display: block;
+
+        content: '';
+
+        background: inherit;
+    }
+    .mirror-y-effect:before
+    {
+        top: 0;
+        bottom: 50%;
+
+        transform: scaleY(-1);
+    }
+    .mirror-y-effect:after
+    {
+        top: 50%;
+        bottom: 0;
+    }
+}
+
+/* 喷绘效果 */
+.airbrush-effect
+{
+    background-image: url(photo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@supports (filter: blur(5px) contrast(5)) and (mix-blend-mode: multiply)
+{
+    .airbrush-effect
+    {
+        position: relative;
+
+        overflow: hidden;
+    }
+    .airbrush-effect:after
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+
+        content: '';
+
+        background: inherit;
+
+        filter: brightness(1.5) saturate(100) blur(5px) contrast(5);
+        mix-blend-mode: multiply;
+    }
+}
+
+/* 铅笔画效果 */
+.pencil-effect
+{
+    background-image: url(photo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@supports (filter: invert(1)) and (background-blend-mode: difference)
+{
+    .pencil-effect
+    {
+        background-image: url(photo.jpg), url(photo.jpg);
+        background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+        box-shadow: inset 0 0 0 1px black;
+
+        background-blend-mode: difference;
+        filter: brightness(2) invert(1) grayscale(1);
+    }
+}
+
+/* 浮雕效果 */
+.emboss-effect
+{
+    background-image: url(photo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@supports (filter: invert(1)) and (background-blend-mode: difference, screen)
+{
+    .emboss-effect
+    {
+        background-image: url(photo.jpg), url(photo.jpg), url(photo.jpg);
+        background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px), center;
+
+        background-blend-mode: difference, screen;
+        filter: brightness(2) invert(1) grayscale(1);
+    }
+}
+
+/* Selective color效果 */
+.selective-color-effect
+{
+    background-image: url(photo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@supports (filter: brightness(3)) and (mix-blend-mode: color)
+{
+    .selective-color-effect
+    {
+        position: relative;
+    }
+    .selective-color-effect:before,
+    .selective-color-effect:after
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+
+        content: '';
+
+        background: inherit;
+        background-color: red;
+
+        background-blend-mode: screen;
+        mix-blend-mode: color;
+        filter: brightness(3);
+    }
+}
+
+/* 粉笔画效果 */
+.chalkboard-effect
+{
+    background-image: url(photo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@supports (filter: grayscale(1)) and (background-blend-mode: difference)
+{
+    .chalkboard-effect
+    {
+        background-image: url(photo.jpg), url(photo.jpg);
+        background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+
+        background-blend-mode: difference;
+        filter: brightness(1.5) grayscale(1);
+    }
+}
+
+/* 彩色粉笔画效果 */
+.colored-chalkboard-effect
+{
+    background-image: url(photo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@supports (filter: brightness(2)) and (background-blend-mode: color, difference)
+{
+    .colored-chalkboard-effect
+    {
+        background-image: url(photo.jpg), url(photo.jpg), url(photo.jpg);
+        background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px), center;
+        background-size: cover;
+
+        background-blend-mode: color, difference;
+        filter: brightness(2);
+    }
+}
+
+/* 彩笔画效果 */
+.colored-pencil-effect
+{
+    background-image: url(photo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@supports (filter: invert(1)) and (mix-blend-mode: color)
+{
+    .colored-pencil-effect
+    {
+        position: relative;
+    }
+    .colored-pencil-effect:before,
+    .colored-pencil-effect:after
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+
+        content: '';
+
+        background-size: cover;
+        box-shadow: inset 0 0 0 1px black;
+    }
+    .colored-pencil-effect:before
+    {
+        background-image: url(photo.jpg), url(photo.jpg);
+        background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+
+        background-blend-mode: difference;
+        filter: brightness(2) invert(1) grayscale(1);
+    }
+    .colored-pencil-effect:after
+    {
+        background: inherit;
+
+        mix-blend-mode: color;
+    }
+}
+
